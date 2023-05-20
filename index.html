@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Nova Consulta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header>
+    <h1>Agendar uma nova consulta</h1>
+    <p>Preencha o fomulário abaixo para agendar sua próxima consulta</p>
+  </header>
+
+  <form>
+    <fieldset>
+      <div class="form-legend">
+        <legend>Dados do Paciente</legend>
+      </div>
+
+      <div class="input-wrapper">
+        <label for="fullname">Nome Completo</label>
+        <input type="text" name="patient_fullname" id="fullname" required />
+      </div>
+      
+      <div class="input-wrapper">
+        <label for="document">Número do Documento <span>Informe apenas números</span></label>
+        <input type="number" name="patient_document" id="document" required />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div class="form-legend">
+        <legend>Dados da Consulta</legend>
+      </div>
+
+      <div class="input-wrapper">
+        <label for="medical_specialization">Especialidade Médica</label>
+        <select name="medical_specialization" id="medical_specialization" required>
+          <option value="">Selecione uma especialidade</option>
+          <option value="acupuntura">Acupuntura</option>
+          <option value="alergia_e_imunologia">Alergia e Imunologia</option>
+          <option value="anestesiologista">Anestesiologista</option>
+          <option value="angiologia">Angiologia</option>
+          <option value="cardiologia">Cardiologia</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <div class="input-wrapper">
+          <label for="date">Data da Consulta</label>
+          <input type="date" id="date" />
+        </div>
+
+        <div class="input-wrapper">
+          <label for="time">Horário da Consulta</label>
+          <input type="time" id="time" />
+        </div>
+      </div>
+
+      <div class="checkbox-wrapper">
+        <input type="checkbox" id="return" />
+        <label for="return">Caso seja uma consulta de retorno, marque esta opção</label>
+      </div>
+
+      <div class="input-wrapper">
+        <label for="extrainfo">Informações Extras</label>
+        <textarea id="extrainfo"></textarea>
+      </div>
+    </fieldset>
+
+    <button type="submit">
+      Agendar Nova Consulta
+    </button>
+  </form>
+</body>
+</html>
